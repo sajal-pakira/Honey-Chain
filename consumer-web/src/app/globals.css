@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --honey-amber: #EBA818;
+    --honey-dark: #A55F0E;
+    --umber-deep: #24140D;
+    --umber-card: #341F14;
+    --cream-bg: #FAF7F2;
+    --cream-surface: #F3EBDD;
+    --wax-seal: #8B2500;
+  }
+
+  body {
+    background-color: var(--cream-bg);
+    color: var(--umber-deep);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Natural Honey Textures & Gradients */
+.honey-hero-mesh {
+  background: radial-gradient(circle at 50% 15%, #FFF0C2 0%, #FAF7F2 65%);
+}
+
+.royalty-accent-card {
+  background: linear-gradient(145deg, #2D170E 0%, #1A0C06 100%);
+  border: 1px solid rgba(235, 168, 24, 0.35);
+  box-shadow: 0 12px 36px -8px rgba(36, 20, 13, 0.25);
+}
+
+.verdict-seal-badge {
+  background: radial-gradient(circle at 35% 35%, #FDECB5 0%, #EBA818 60%, #A55F0E 100%);
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.6), 0 8px 20px -4px rgba(165, 95, 14, 0.4);
+}
+
+/* Spring motion and reduced-motion handling */
+@media (prefers-reduced-motion: no-preference) {
+  .section-reveal {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-reveal,
+  .animate-verdict-reveal,
+  .animate-pulse-glow {
+    animation: none !important;
+    transition: none !important;
+  }
+}
