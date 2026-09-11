@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ShieldCheck, QrCode, Search, Award, Sprout, ArrowRight } from "lucide-react";
 import { MOCK_BATCHES } from "../lib/mockData";
