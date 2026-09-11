@@ -6,7 +6,12 @@ export const metadata = {
     "Verify honey harvest authenticity on Polygon Amoy blockchain and inspect fair-trade beekeeper royalty transparency under KVIC & Ministry of MSME.",
   keywords: ["HoneyChain", "KVIC", "Honey Mission", "Blockchain Traceability", "Beekeeping", "Authentic Honey"],
   authors: [{ name: "HoneyChain Consortium / KVIC" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({ children }) {
