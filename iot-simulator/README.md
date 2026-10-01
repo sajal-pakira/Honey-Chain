@@ -25,8 +25,9 @@ The **HoneyChain IoT** firmware acts as the edge telemetry node for smart beehiv
 
 * **WebOTA Updates**: Supports wireless firmware updates directly through the local web interface without requiring physical reconnection.
 
+## 🔌 ESP32 Pinout Reference
 
-
+![HoneyChain ESP32 Pinout](./Final%20pinout%20img.jpeg)
 ---
 
 ## 🔌 Hardware & Pin Connections
