@@ -168,15 +168,15 @@ See [`docs/demo-script.md`](./docs/demo-script.md) for the full walkthrough.
 
 ### 🎬 Project Demo
 
-| Demo 1 | Demo 2 |
+|  |  |
 |:---:|:---:|
 | <img src="./Data/1.jpeg" width="400" alt="HoneyChain Demo 1"> | <img src="./Data/2.png" width="400" alt="HoneyChain Demo 2"> |
 
-| Demo 3 | Demo 4 |
+|  |  |
 |:---:|:---:|
 | <img src="./Data/3.png" width="400" alt="HoneyChain Demo 3"> | <img src="./Data/4.png" width="400" alt="HoneyChain Demo 4"> |
 
-| Demo 5 |
+|  |
 |:---:|
 | <img src="./Data/5.jpeg" width="800" alt="HoneyChain Demo 5"> | 
 
