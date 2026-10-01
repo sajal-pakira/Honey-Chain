@@ -60,27 +60,27 @@ IoT-enabled hive sensors, hardware-secured data attestation, and AI-driven analy
 ## 🏗️ Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────────────┐
 │  Hive Edge Layer                                              │
 │  IoT Sensors (temp/humidity/weight) + TEE Attestation         │
 │  + Hive Camera (AI disease flags) + Beekeeper Mobile App      │
 └───────────────────────────┬───────────────────────────────────┘
                             ▼
-┌─────────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────────────┐
 │  Backend (FastAPI)                                             │
 │  Ingestion & Analytics · Batch/QR Generation · Chain Anchoring │
-└───────────────────────────┬───────────────────────────────────┘
+└───────────────────────────┬────────────────────────────────────┘
                             ▼
-┌─────────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────────────┐
 │  Data & Ledger Layer                                          │
 │  PostgreSQL (operational data) · IPFS (photos/lab reports)    │
 │  Blockchain (batch hash anchors + royalty claims)             │
 └───────────────────────────┬───────────────────────────────────┘
                             ▼
-┌───────────────────────────┬───────────────────────────────────┐
+┌───────────────────────────┬───────────────────────────────────────┐
 │  Consumer QR Page       │  KVIC Admin Dashboard & Farmer Dashboard│
 │  Batch history + proof  │  Cluster monitoring + analytics         │
-└─────────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────────────────┘
 ```
 
 **Design principle:** only cryptographic hashes are stored on-chain — raw data (photos, lab reports, sensor logs) stays off-chain in PostgreSQL/IPFS. This keeps writes fast and cheap while every batch remains independently, cryptographically verifiable.
