@@ -176,6 +176,9 @@ See [`docs/demo-script.md`](./docs/demo-script.md) for the full walkthrough.
 |:---:|:---:|
 | <img src="./Data/3.png" width="400" alt="HoneyChain Demo 3"> | <img src="./Data/4.png" width="400" alt="HoneyChain Demo 4"> |
 
+| Demo 5 |
+|:---:|
+| <img src="./Data/5.jpeg" width="400" alt="HoneyChain Demo 5"> | 
 
 ### 📸 Prototype Gallery
 
