@@ -176,22 +176,6 @@ See [`docs/demo-script.md`](./docs/demo-script.md) for the full walkthrough.
 |:---:|:---:|
 | <img src="./Data/3.png" width="400" alt="HoneyChain Demo 3"> | <img src="./Data/4.png" width="400" alt="HoneyChain Demo 4"> |
 
-## 🎯 Impact
-
-| Stakeholder | Benefit |
-|---|---|
-| **Consumers** | Instant, verifiable proof of honey authenticity |
-| **Rural Beekeepers** | Fair, traceable compensation for downstream resale value |
-| **KVIC & Institutions** | Scalable oversight, productivity data, and market credibility |
-| **Ecosystem** | Reduced counterfeiting, stronger market linkages, data-driven hive management |
-
-## 🗺️ Roadmap
-
-- [ ] Integration with UPI/KVIC disbursement systems for automated royalty payouts
-- [ ] LoRaWAN support for low-connectivity rural deployments
-- [ ] Multi-language support for the beekeeper mobile app
-- [ ] Expanded AI disease-detection model trained on field-collected data
-- [ ] Mainnet migration path and gas-cost optimization
 
 ### 📸 Prototype Gallery
 
@@ -208,6 +192,22 @@ See [`docs/demo-script.md`](./docs/demo-script.md) for the full walkthrough.
 | **ESP32 Microcontroller** |
 | <img src="iot-simulator/ESP32 dev-board.jpeg" width="220" alt="ESP32"> |
 
+## 🎯 Impact
+
+| Stakeholder | Benefit |
+|---|---|
+| **Consumers** | Instant, verifiable proof of honey authenticity |
+| **Rural Beekeepers** | Fair, traceable compensation for downstream resale value |
+| **KVIC & Institutions** | Scalable oversight, productivity data, and market credibility |
+| **Ecosystem** | Reduced counterfeiting, stronger market linkages, data-driven hive management |
+
+## 🗺️ Roadmap
+
+- [ ] Integration with UPI/KVIC disbursement systems for automated royalty payouts
+- [ ] LoRaWAN support for low-connectivity rural deployments
+- [ ] Multi-language support for the beekeeper mobile app
+- [ ] Expanded AI disease-detection model trained on field-collected data
+- [ ] Mainnet migration path and gas-cost optimization
 ## 🤝 Contributing
 
 Contributions are welcome. Please open an issue to discuss proposed changes before submitting a pull request.
