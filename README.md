@@ -195,6 +195,14 @@ See [`docs/demo-script.md`](./docs/demo-script.md) for the full walkthrough.
 | **ESP32 Microcontroller** |
 | <img src="iot-simulator/ESP32 dev-board.jpeg" width="220" alt="ESP32"> |
 
+🚀 Project Demo & Overview
+Watch the full system walkthrough and live demonstration of the HoneyChain IoT dashboard in action on YouTube:
+
+👉 **Watch the HoneyChain IoT Demo Video on YouTube**
+**https://youtu.be/EneVHXiw73I**
+
+HoneyChain IoT is an advanced, production-grade apiculture telemetry hub powered by the ESP32. Designed for modern smart beekeeping, this system integrates a multi-sensor suite consisting of an HX711 load cell (for precise hive weight and honey yield tracking), an INMP441 I2S microphone paired with high-resolution ArduinoFFT analysis (to monitor colony pitch and detect distress roars), a NEO-6M GPS module (for real-time apiary tracking and anti-theft security), and a DHT22 sensor (for ambient temperature and humidity). All live telemetry data is streamed seamlessly onto a custom-built, modern dark-mode web dashboard featuring real-time Chart.js trends, optimized scaling, and wireless OTA firmware update capabilities.
+
 ## 🎯 Impact
 
 | Stakeholder | Benefit |
