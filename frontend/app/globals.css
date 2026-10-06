@@ -1,0 +1,999 @@
+@import "tailwindcss";
+
+:root {
+  --background: #080807;
+  --foreground: #f5f2ea;
+
+  --surface: #11100e;
+  --surface-soft: #171512;
+  --border: rgba(255, 255, 255, 0.1);
+
+  --muted: #858078;
+  --muted-strong: #aaa49a;
+
+  --honey: #d9a441;
+  --honey-bright: #f0c56a;
+
+  --success: #6fcf97;
+  --danger: #ef8f8f;
+}
+
+html {
+  color-scheme: dark;
+  background: var(--background);
+}
+
+html.light {
+  --background: #f7f4ee;
+  --foreground: #171614;
+
+  --surface: #fffdf8;
+  --surface-soft: #f1ede4;
+  --border: rgba(23, 22, 20, 0.1);
+
+  --muted: #777066;
+  --muted-strong: #514c45;
+
+  --honey: #b9790e;
+  --honey-bright: #d99b25;
+
+  --success: #3f7d52;
+  --danger: #b84c4c;
+
+  color-scheme: light;
+}
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-honey: var(--honey);
+  --color-honey-bright: var(--honey-bright);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(217, 164, 65, 0.25);
+  color: var(--foreground);
+}
+
+/* -------------------------------------------------------------------------- */
+/* HONEYCHAIN GENERIC THEME                                                   */
+/* -------------------------------------------------------------------------- */
+
+.hc-page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.hc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.hc-muted {
+  color: var(--muted);
+}
+
+.hc-muted-strong {
+  color: var(--muted-strong);
+}
+
+.hc-border {
+  border-color: var(--border);
+}
+
+.hc-honey {
+  color: var(--honey);
+}
+
+/* -------------------------------------------------------------------------- */
+/* LIGHT MODE                                                                 */
+/*                                                                            */
+/* IMPORTANT: Do NOT globally override .text-white.                         */
+/* Hero pages intentionally use white text over dark imagery.                */
+/* -------------------------------------------------------------------------- */
+
+html.light body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* -------------------------------------------------------------------------- */
+/* HOME PAGE LIGHT MODE                                                       */
+/* -------------------------------------------------------------------------- */
+
+html.light .hc-home {
+  color: #171614;
+}
+
+/* Make the hero image brighter in light mode */
+html.light .hc-home .hc-hero-overlay {
+  background: rgba(247, 244, 238, 0.38);
+}
+
+/* Left readability gradient */
+html.light .hc-home .hc-hero-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(247, 244, 238, 0.92),
+    rgba(247, 244, 238, 0.58),
+    rgba(247, 244, 238, 0.12)
+  );
+}
+
+/* Bottom fade */
+html.light .hc-home .hc-bottom-fade {
+  background: linear-gradient(
+    to top,
+    #f7f4ee,
+    transparent
+  );
+}
+
+/* Navigation */
+html.light .hc-home .hc-nav {
+  border-color: rgba(23, 22, 20, 0.1);
+  background: rgba(247, 244, 238, 0.55);
+}
+
+/* Navigation logo */
+html.light .hc-home .hc-logo-box {
+  background: #171614;
+  color: #f7f4ee;
+}
+
+/* Navigation text */
+html.light .hc-home .hc-nav-text {
+  color: #171614;
+}
+
+/* API status */
+html.light .hc-home .hc-api {
+  border-color: rgba(23, 22, 20, 0.12);
+  background: rgba(255, 253, 248, 0.65);
+  color: #625c53;
+}
+
+/* Hero text */
+html.light .hc-home .hc-hero-main {
+  color: #171614;
+}
+
+html.light .hc-home .hc-hero-script {
+  color: rgba(23, 22, 20, 0.72);
+}
+
+/* Badge */
+html.light .hc-home .hc-badge {
+  border-color: rgba(23, 22, 20, 0.1);
+  background: rgba(255, 253, 248, 0.6);
+  color: #625c53;
+}
+
+/* Description */
+html.light .hc-home .hc-description {
+  color: rgba(23, 22, 20, 0.65);
+}
+
+/* Primary button */
+html.light .hc-home .hc-primary-button {
+  background: #171614;
+  color: #fffdf8;
+}
+
+html.light .hc-home .hc-primary-button:hover {
+  background: #2a2824;
+}
+
+/* Secondary button */
+html.light .hc-home .hc-secondary-button {
+  border-color: rgba(23, 22, 20, 0.16);
+  background: rgba(255, 253, 248, 0.55);
+  color: #403c36;
+}
+
+html.light .hc-home .hc-secondary-button:hover {
+  background: rgba(23, 22, 20, 0.06);
+}
+
+/* Feature section */
+html.light .hc-home .hc-features {
+  border-color: rgba(23, 22, 20, 0.1);
+  background: rgba(247, 244, 238, 0.72);
+}
+
+/* Feature dividers */
+html.light .hc-home .hc-features > div {
+  border-color: rgba(23, 22, 20, 0.1);
+}
+
+/* Feature icon */
+html.light .hc-home .hc-feature-icon {
+  border-color: rgba(23, 22, 20, 0.1);
+  background: rgba(23, 22, 20, 0.035);
+  color: #403c36;
+}
+
+/* Feature title */
+html.light .hc-home .hc-feature-title {
+  color: #171614;
+}
+
+/* Feature description */
+html.light .hc-home .hc-feature-description {
+  color: #777066;
+}
+
+/* Footer */
+html.light .hc-home .hc-footer {
+  color: #8b8378;
+}
+
+/* ================================================================ */
+/* HONEYCHAIN DASHBOARD THEME                                      */
+/* ================================================================ */
+
+.hc-dashboard {
+  --hc-grid: rgba(255, 255, 255, 0.06);
+  --hc-chart-text: rgba(255, 255, 255, 0.35);
+  --hc-tooltip-bg: #111111;
+  --hc-tooltip-border: rgba(255, 255, 255, 0.1);
+  --hc-tooltip-text: #ffffff;
+}
+
+/* ================================================================ */
+/* LIGHT MODE                                                       */
+/* ================================================================ */
+
+html.light .hc-dashboard {
+  color: #171614;
+  background: #f7f4ee;
+
+  --hc-grid: rgba(23, 22, 20, 0.08);
+  --hc-chart-text: rgba(23, 22, 20, 0.45);
+  --hc-tooltip-bg: #fffdf8;
+  --hc-tooltip-border: rgba(23, 22, 20, 0.12);
+  --hc-tooltip-text: #171614;
+}
+
+/* ================================================================ */
+/* BACKGROUND                                                       */
+/* Keep the honey image strongly visible.                          */
+/* ================================================================ */
+
+html.light .hc-dashboard-bg {
+  opacity: 0.90;
+}
+
+html.light .hc-dashboard-overlay {
+  background: rgba(247, 244, 238, 0.16);
+}
+
+/* ================================================================ */
+/* SIDEBAR                                                          */
+/* More transparent glass                                           */
+/* ================================================================ */
+
+html.light .hc-sidebar {
+  background: rgba(255, 253, 248, 0.48);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* ================================================================ */
+/* HEADER                                                           */
+/* ================================================================ */
+
+html.light .hc-header {
+  background: rgba(255, 253, 248, 0.38);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* ================================================================ */
+/* CARDS                                                            */
+/* Transparent glass instead of solid white                         */
+/* ================================================================ */
+
+html.light .hc-card {
+  background: rgba(255, 253, 248, 0.48);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+html.light .hc-panel {
+  background: rgba(255, 253, 248, 0.38);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* ================================================================ */
+/* HIVE ROWS                                                        */
+/* ================================================================ */
+
+html.light .hc-hive-row {
+  background: rgba(23, 22, 20, 0.025);
+  border-color: rgba(23, 22, 20, 0.08);
+}
+
+html.light .hc-hive-row:hover {
+  background: rgba(23, 22, 20, 0.055);
+}
+
+/* ================================================================ */
+/* GPS                                                              */
+/* ================================================================ */
+
+html.light .hc-map-box {
+  background: rgba(23, 22, 20, 0.025);
+  border-color: rgba(23, 22, 20, 0.08);
+}
+
+/* ================================================================ */
+/* API STATUS                                                       */
+/* ================================================================ */
+
+html.light .hc-api {
+  background: rgba(255, 253, 248, 0.42);
+  border-color: rgba(23, 22, 20, 0.10);
+  color: #625c53;
+}
+
+/* ================================================================ */
+/* MUTED TEXT                                                       */
+/* ================================================================ */
+
+html.light .hc-muted-text {
+  color: #625c53 !important;
+}
+
+html.light .hc-faint-text {
+  color: #81796f !important;
+}
+
+/* ================================================================ */
+/* SIDEBAR LINKS                                                    */
+/* ================================================================ */
+
+html.light .hc-sidebar a {
+  color: #665f55;
+}
+
+html.light .hc-sidebar a:hover {
+  background: rgba(23, 22, 20, 0.045);
+  color: #171614;
+}
+
+/* Active dashboard */
+
+html.light .hc-sidebar a.bg-amber-400\/10 {
+  background: rgba(185, 121, 14, 0.13);
+  color: #8d5d08;
+}
+
+/* ================================================================ */
+/* CHEVRON                                                          */
+/* ================================================================ */
+
+html.light .hc-chevron {
+  color: rgba(23, 22, 20, 0.25);
+}
+
+html.light .hc-hive-row:hover .hc-chevron {
+  color: rgba(23, 22, 20, 0.55);
+}
+
+/* ================================================================ */
+/* CHART ICON                                                       */
+/* ================================================================ */
+
+html.light .hc-chart-icon {
+  background: rgba(23, 22, 20, 0.035);
+  border-color: rgba(23, 22, 20, 0.08);
+  color: rgba(23, 22, 20, 0.45);
+}
+
+/* ================================================================ */
+/* ERROR                                                            */
+/* ================================================================ */
+
+html.light .hc-dashboard .text-red-300 {
+  color: #a33f3f;
+}
+
+
+/* ================================================================ */
+/* SUPPLY CHAIN — LIGHT MODE FIX                                  */
+/* ================================================================ */
+
+html.light .hc-supply {
+  color: #171614;
+}
+
+/* Keep the honey background visible, but controlled */
+html.light .hc-supply-bg {
+  opacity: 0.32;
+}
+
+html.light .hc-supply-overlay {
+  background: rgba(247, 244, 238, 0.62);
+}
+
+/* Sidebar */
+html.light .hc-supply .hc-sidebar {
+  background: rgba(255, 253, 248, 0.88);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* Header */
+html.light .hc-supply .hc-header {
+  background: rgba(255, 253, 248, 0.88);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* Main cards */
+html.light .hc-supply .hc-card {
+  background: rgba(255, 253, 248, 0.82);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* Larger panels */
+html.light .hc-supply .hc-panel {
+  background: rgba(255, 253, 248, 0.82);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+/* Batch list cards */
+html.light .hc-supply .hc-batch-card {
+  background: rgba(255, 253, 248, 0.78);
+  border-color: rgba(23, 22, 20, 0.10);
+}
+
+html.light .hc-supply .hc-batch-card:hover {
+  background: rgba(255, 253, 248, 0.92);
+  border-color: rgba(185, 121, 14, 0.28);
+}
+
+/* Search box */
+html.light .hc-supply input {
+  background: rgba(255, 253, 248, 0.86);
+  border-color: rgba(23, 22, 20, 0.12);
+  color: #171614;
+}
+
+html.light .hc-supply input::placeholder {
+  color: #8a8278;
+}
+
+/* Muted text */
+html.light .hc-supply .hc-muted-text {
+  color: #625c53 !important;
+}
+
+html.light .hc-supply .hc-faint-text {
+  color: #81796f !important;
+}
+
+/* Breadcrumb */
+html.light .hc-supply .hc-breadcrumb {
+  color: #81796f;
+}
+
+/* Status pills */
+html.light .hc-supply .hc-status {
+  background: rgba(185, 121, 14, 0.10);
+  border-color: rgba(185, 121, 14, 0.18);
+  color: #9a6509;
+}
+
+/* ================================================================ */
+/* SUPPLY CHAIN — LIGHT MODE / GLASS FIX                           */
+/* ================================================================ */
+
+html.light .hc-supply {
+  color: #171614;
+}
+
+/* --------------------------------------------------------------- */
+/* BACKGROUND                                                       */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply-bg {
+  opacity: 0.42;
+}
+
+html.light .hc-supply-overlay {
+  background: rgba(247, 244, 238, 0.28);
+}
+
+/* --------------------------------------------------------------- */
+/* SIDEBAR                                                          */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-sidebar {
+  background: rgba(255, 253, 248, 0.48);
+  border-color: rgba(23, 22, 20, 0.09);
+}
+
+/* --------------------------------------------------------------- */
+/* HEADER                                                           */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-header {
+  background: rgba(255, 253, 248, 0.42);
+  border-color: rgba(23, 22, 20, 0.09);
+}
+
+/* --------------------------------------------------------------- */
+/* STAT CARDS                                                       */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-card {
+  background: rgba(255, 253, 248, 0.46);
+  border-color: rgba(23, 22, 20, 0.09);
+}
+
+/* --------------------------------------------------------------- */
+/* MAIN PANELS                                                      */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-panel {
+  background: rgba(255, 253, 248, 0.44);
+  border-color: rgba(23, 22, 20, 0.09);
+}
+
+/* --------------------------------------------------------------- */
+/* BATCH CARDS                                                      */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-batch-card {
+  background: rgba(255, 253, 248, 0.38);
+  border-color: rgba(185, 121, 14, 0.20);
+}
+
+html.light .hc-supply .hc-batch-card:hover {
+  background: rgba(255, 253, 248, 0.52);
+  border-color: rgba(185, 121, 14, 0.32);
+}
+
+/* --------------------------------------------------------------- */
+/* SEARCH                                                           */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply input {
+  background: rgba(255, 253, 248, 0.48);
+  border-color: rgba(23, 22, 20, 0.10);
+  color: #171614;
+}
+
+html.light .hc-supply input::placeholder {
+  color: #777066;
+}
+
+/* --------------------------------------------------------------- */
+/* MUTED TEXT                                                       */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-muted-text {
+  color: #625c53 !important;
+}
+
+html.light .hc-supply .hc-faint-text {
+  color: #777066 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* SIDEBAR LINKS                                                    */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-sidebar a {
+  color: #625c53;
+}
+
+html.light .hc-supply .hc-sidebar a:hover {
+  background: rgba(23, 22, 20, 0.045);
+  color: #171614;
+}
+
+/* Active Supply Chain */
+html.light .hc-supply .hc-sidebar a.bg-amber-400\/10 {
+  background: rgba(185, 121, 14, 0.10);
+  color: #9a6509;
+}
+
+/* --------------------------------------------------------------- */
+/* STATUS                                                           */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-status {
+  background: rgba(185, 121, 14, 0.09);
+  border-color: rgba(185, 121, 14, 0.18);
+  color: #9a6509;
+}
+
+/* ================================================================ */
+/* SUPPLY CHAIN — LIGHT MODE TEXT CONTRAST FIX                     */
+/* ================================================================ */
+
+html.light .hc-supply {
+  color: #171614;
+}
+
+/* Main headings */
+html.light .hc-supply h1,
+html.light .hc-supply h2,
+html.light .hc-supply h3 {
+  color: #171614 !important;
+}
+
+/* Normal body text */
+html.light .hc-supply p {
+  color: #514c45;
+}
+
+/* Small / secondary text */
+html.light .hc-supply .text-white\/40,
+html.light .hc-supply .text-white\/45,
+html.light .hc-supply .text-white\/50,
+html.light .hc-supply .text-white\/55,
+html.light .hc-supply .text-white\/60,
+html.light .hc-supply .text-white\/65,
+html.light .hc-supply .text-white\/70 {
+  color: #625c53 !important;
+}
+
+/* Any remaining white text in the light theme */
+html.light .hc-supply .text-white {
+  color: #171614 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* HEADER                                                           */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-header h1,
+html.light .hc-supply .hc-header p,
+html.light .hc-supply .hc-header span {
+  color: #171614;
+}
+
+/* Keep the small section label amber */
+html.light .hc-supply .hc-header .text-amber-400,
+html.light .hc-supply .hc-header .text-amber-300 {
+  color: #9a6509 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* SIDEBAR                                                          */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-sidebar {
+  color: #171614;
+}
+
+html.light .hc-supply .hc-sidebar a {
+  color: #625c53 !important;
+}
+
+html.light .hc-supply .hc-sidebar a:hover {
+  color: #171614 !important;
+}
+
+html.light .hc-supply .hc-sidebar a.bg-amber-400\/10 {
+  color: #9a6509 !important;
+}
+
+/* Sidebar brand */
+html.light .hc-supply .hc-sidebar h1,
+html.light .hc-supply .hc-sidebar h2,
+html.light .hc-supply .hc-sidebar .font-semibold {
+  color: #171614 !important;
+}
+
+/* Sidebar secondary brand text */
+html.light .hc-supply .hc-sidebar .text-white\/40,
+html.light .hc-supply .hc-sidebar .text-white\/50,
+html.light .hc-supply .hc-sidebar .text-white\/60 {
+  color: #777066 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* BREADCRUMB                                                       */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-breadcrumb {
+  color: #777066 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* STAT CARDS                                                       */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-card h3,
+html.light .hc-supply .hc-card h4 {
+  color: #625c53 !important;
+}
+
+html.light .hc-supply .hc-card .text-2xl,
+html.light .hc-supply .hc-card .text-3xl,
+html.light .hc-supply .hc-card .font-semibold,
+html.light .hc-supply .hc-card .font-bold {
+  color: #171614 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* HONEY BATCHES PANEL                                              */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-panel h2,
+html.light .hc-supply .hc-panel h3 {
+  color: #171614 !important;
+}
+
+html.light .hc-supply .hc-panel p {
+  color: #625c53 !important;
+}
+
+/* Batch code */
+html.light .hc-supply .hc-batch-card {
+  color: #171614;
+}
+
+html.light .hc-supply .hc-batch-card .font-semibold,
+html.light .hc-supply .hc-batch-card .font-medium {
+  color: #171614 !important;
+}
+
+/* Batch metadata */
+html.light .hc-supply .hc-batch-card .text-white\/40,
+html.light .hc-supply .hc-batch-card .text-white\/50,
+html.light .hc-supply .hc-batch-card .text-white\/60 {
+  color: #625c53 !important;
+}
+
+/* Batch code stays amber */
+html.light .hc-supply .hc-batch-card .text-amber-400,
+html.light .hc-supply .hc-batch-card .text-amber-300 {
+  color: #9a6509 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* SEARCH INPUT                                                     */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply input {
+  color: #171614 !important;
+}
+
+html.light .hc-supply input::placeholder {
+  color: #777066 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* STATUS                                                           */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply .hc-status {
+  color: #8a5c05 !important;
+}
+
+/* --------------------------------------------------------------- */
+/* DETAILS BUTTON                                                   */
+/* --------------------------------------------------------------- */
+
+html.light .hc-supply button {
+  color: #514c45;
+}
+
+html.light .hc-supply button:hover {
+  color: #171614;
+}
+
+/* --------------------------------------------------------------- */
+/* ICONS                                                            */
+/* --------------------------------------------------------------- */
+
+/* Don't make every icon black — amber icons stay amber */
+
+html.light .hc-supply .text-amber-400 svg,
+html.light .hc-supply .text-amber-300 svg {
+  color: #b9790e;
+}
+
+/* ================================================================
+   HONEYCHAIN PUBLIC HONEY PASSPORT
+   LIGHT MODE
+   ================================================================ */
+
+/* Keep the existing dark page exactly as it is */
+
+.hc-passport {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+.hc-passport-card {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease;
+}
+
+/* ================================================================
+   LIGHT MODE
+   ================================================================ */
+
+html.light .hc-passport {
+  background: #f7f4ee !important;
+  color: #171614 !important;
+}
+
+/* Background image */
+
+html.light .hc-passport-bg {
+  opacity: 0.28;
+}
+
+/* Main background overlay */
+
+html.light .hc-passport-overlay {
+  background: rgba(247, 244, 238, 0.70) !important;
+}
+
+/* Bottom gradient */
+
+html.light .hc-passport-gradient {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(247, 244, 238, 0.18),
+      rgba(247, 244, 238, 0.72),
+      #f7f4ee
+    ) !important;
+}
+
+/* ================================================================
+   CARDS
+   ================================================================ */
+
+html.light .hc-passport-card {
+  background: rgba(255, 253, 248, 0.78) !important;
+  border-color: rgba(23, 22, 20, 0.10) !important;
+  box-shadow:
+    0 18px 60px rgba(23, 22, 20, 0.06);
+}
+
+/* ================================================================
+   BRAND
+   ================================================================ */
+
+html.light .hc-passport-brand {
+  color: #171614 !important;
+}
+
+html.light .hc-passport-public {
+  color: rgba(23, 22, 20, 0.42) !important;
+}
+
+/* ================================================================
+   GENERAL TEXT
+   ================================================================ */
+
+html.light .hc-passport h1 {
+  color: #171614 !important;
+}
+
+html.light .hc-passport-heading {
+  color: rgba(23, 22, 20, 0.82) !important;
+}
+
+html.light .hc-passport-muted {
+  color: #777066 !important;
+}
+
+/* ================================================================
+   TAGS
+   ================================================================ */
+
+html.light .hc-passport-tag {
+  background: rgba(23, 22, 20, 0.035) !important;
+  border-color: rgba(23, 22, 20, 0.10) !important;
+  color: #625c53 !important;
+}
+
+/* ================================================================
+   INFO LABELS
+   ================================================================ */
+
+html.light .hc-passport-label {
+  color: #8a8175 !important;
+}
+
+html.light .hc-passport-value {
+  color: #302d28 !important;
+}
+
+/* ================================================================
+   TRACEABILITY
+   ================================================================ */
+
+html.light .hc-passport-line {
+  background: rgba(23, 22, 20, 0.10) !important;
+}
+
+/* ================================================================
+   CRYPTOGRAPHIC PROOF
+   ================================================================ */
+
+html.light .hc-passport-proof {
+  background: rgba(23, 22, 20, 0.035) !important;
+  border-color: rgba(23, 22, 20, 0.08) !important;
+}
+
+/* Keep SHA hash readable */
+
+html.light .hc-passport-proof .text-emerald-300\/70 {
+  color: #357553 !important;
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+
+html.light .hc-passport-footer {
+  color: rgba(23, 22, 20, 0.32) !important;
+}
+
+/* ================================================================
+   ERROR PAGE
+   ================================================================ */
+
+html.light .hc-passport-link {
+  color: #777066 !important;
+}
+
+html.light .hc-passport-link:hover {
+  color: #171614 !important;
+}
+
+/* ================================================================
+   THEME TOGGLE
+   ================================================================ */
+
+html.light .hc-passport button {
+  border-color: rgba(23, 22, 20, 0.10);
+  background: rgba(255, 253, 248, 0.72);
+  color: #403c36;
+}
+
+html.light .hc-passport button:hover {
+  border-color: rgba(185, 121, 14, 0.35);
+  background: rgba(185, 121, 14, 0.08);
+  color: #9a6509;
+}
