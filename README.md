@@ -113,7 +113,7 @@ Active
 
 ### Dashboard
 
-![HoneyChain Dashboard](screenshots/dashboard.png)
+![HoneyChain Dashboard](screenshots/dashboard.png.jpg)
 
 ---
 
@@ -197,7 +197,7 @@ Each event can contain information such as:
 - Notes
 - Blockchain transaction information
 
-![Supply Chain](screenshots/supply-chain.png)
+![Supply Chain](screenshots/supply-chain.png.jpg)
 
 ---
 
