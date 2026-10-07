@@ -130,7 +130,7 @@ The platform visualizes:
 - GPS information
 - Last telemetry update
 
-![Hive Monitoring](screenshots/hive-monitoring.png)
+![Hive Monitoring](screenshots/hive-monitoring.png.jpg)
 
 ---
 
@@ -167,7 +167,7 @@ Each batch can contain:
 - Supply-chain events
 - QR verification token
 
-![Honey Batch](screenshots/honey-batch.png)
+![Honey Batch](screenshots/honey-batch.png.jpg)
 
 ---
 
@@ -226,7 +226,7 @@ The system can verify whether the batch information matches the registered block
 
 The database handles the application's operational data, while blockchain provides an independent verification layer for the batch's integrity.
 
-![Blockchain Verification](screenshots/blockchain-verification.png)
+![Blockchain Verification](screenshots/blockchain-verification.png.jpg)
 
 ---
 
@@ -286,7 +286,7 @@ HONEY PASSPORT
        └── Blockchain Verification
 ```
 
-![QR Code](screenshots/qr-code.png)
+![QR Code](screenshots/qr-code.png.jpg)
 
 ---
 
@@ -328,7 +328,7 @@ GPS coordinates
 Ethereum Sepolia
 ```
 
-![Honey Passport](screenshots/honey-passport.png)
+![Honey Passport](screenshots/honey-passport.png.jpg)
 
 ---
 
@@ -348,11 +348,11 @@ The language selector allows users to switch the interface language.
 
 This makes the system more practical for local beekeepers and consumers.
 
-![English Interface](screenshots/language-english.png)
+![English Interface](screenshots/language-english.png.jpg)
 
-![Bengali Interface](screenshots/language-bengali.png)
+![Bengali Interface](screenshots/language-bengali.png.jpg)
 
-![Hindi Interface](screenshots/language-hindi.png)
+![Hindi Interface](screenshots/language-hindi.png.jpg)
 
 ---
 
@@ -372,7 +372,7 @@ Longitude
 
 This provides geographical context for the origin of the honey.
 
-![Hive Location](screenshots/gps-origin.png)
+![Hive Location](screenshots/gps-origin.png.jpg)
 
 ---
 
@@ -551,7 +551,6 @@ Honey-Chain/
 
 ---
 
-# 🎥 Demo
 
 ## Software + Blockchain Demo
 
@@ -575,31 +574,7 @@ Honey Passport
 Multilingual Interface
 ```
 
-> 📌 Add the final project demonstration video here.
 
-```text
-[🎥 HoneyChain Demo Video]
-```
-
----
-
-# 🐝 Hardware Demonstration
-
-The physical IoT hardware demonstration is presented separately.
-
-The hardware layer includes:
-
-```text
-ESP32
- │
- ├── DHT22
- │
- ├── HX711 + Load Cell
- │
- ├── INMP441
- │
- └── GPS
-```
 
 The hardware demo focuses on the physical sensing and telemetry generation.
 
@@ -607,57 +582,7 @@ The software demo focuses on how that telemetry becomes part of the HoneyChain t
 
 ---
 
-# 📸 Product Screenshots
-
-## Landing Page
-
-![Landing Page](screenshots/landing.png)
-
----
-
-## Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-## Hive Monitoring
-
-![Hive Monitoring](screenshots/hive-monitoring.png)
-
----
-
-## Honey Batches
-
-![Honey Batches](screenshots/batches.png)
-
----
-
-## Supply Chain
-
-![Supply Chain](screenshots/supply-chain.png)
-
----
-
-## Blockchain Verification
-
-![Blockchain](screenshots/blockchain.png)
-
----
-
-## Honey Passport
-
-![Honey Passport](screenshots/honey-passport.png)
-
----
-
-## Multilingual Interface
-
-![Multilingual](screenshots/multilingual.png)
-
----
-
-# 🧪 Current Demonstration Data
+# Demonstration
 
 The current demonstration environment includes a connected hive with telemetry such as:
 
@@ -847,9 +772,9 @@ Instead of treating these as separate systems, HoneyChain connects them into one
 
 ---
 
-# 🏆 Hackathon Demo Highlights
 
-The key demonstration points are:
+
+# The key demonstration points are:
 
 ### 01 — IoT
 
@@ -911,11 +836,7 @@ Built for demonstrating how physical honey production data can be connected to a
 
 ---
 
-# 📜 License
 
-Add the project's license here.
-
----
 
 <p align="center">
 
@@ -925,48 +846,3 @@ Add the project's license here.
 
 </p>
 ```
-
-## One change I'd make before you commit this README
-
-Create this folder:
-
-```text
-Honey-Chain/
-└── screenshots/
-```
-
-Then put your screenshots inside it with names matching the README:
-
-```text
-screenshots/
-├── landing.png
-├── dashboard.png
-├── hive-monitoring.png
-├── honey-batch.png
-├── batches.png
-├── supply-chain.png
-├── blockchain.png
-├── blockchain-verification.png
-├── qr-code.png
-├── honey-passport.png
-├── language-english.png
-├── language-bengali.png
-├── language-hindi.png
-├── multilingual.png
-└── gps-origin.png
-```
-
-**Don't try to fill all of them.** For the final GitHub repo, I'd prioritize about **8 screenshots**:
-
-1. Landing
-2. Dashboard
-3. Hive monitoring
-4. Batch
-5. Supply chain
-6. Blockchain verification
-7. Honey Passport
-8. Bengali/Hindi multilingual view
-
-That will make the repository look like a **finished product**, rather than a collection of source code.
-
-And importantly, the README explicitly separates your **hardware demonstration** from the **software + blockchain demonstration**, which matches how you're presenting the project in the video.
