@@ -9,6 +9,8 @@ HoneyChain is an IoT + Blockchain based honey traceability platform designed to 
 The platform combines **IoT hive monitoring, honey batch management, supply-chain traceability, blockchain verification, QR-based consumer verification, and multilingual accessibility** into one system.
 
 ---
+# Youtube video - https://youtu.be/EneVHXiw73I?si=-3jFgfoDRihP8hwS
+---
 
 ## 🚀 What is HoneyChain?
 
